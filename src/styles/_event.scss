@@ -1,0 +1,76 @@
+@use 'variables';
+
+.event {
+    padding: 80px 0;
+
+    &--petiscos {
+        background-image: linear-gradient(variables.$dark_brown, variables.$light_brown);
+    }
+
+    &--bebidas {
+        background-image: linear-gradient(variables.$light_brown, variables.$beige);
+    }
+
+    &--frutos-do-mar {
+        background-image: linear-gradient(variables.$beige, variables.$dark_brown);
+    }
+
+    &--aves {
+        background-image: linear-gradient(variables.$dark_brown, variables.$light_brown);
+    }
+
+    &--carnes {
+        background-image: linear-gradient(variables.$light_brown, variables.$beige);
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__image {
+        max-width: 360px;
+        vertical-align: middle;
+    }
+
+    &__details--petiscos {
+        margin-right: 8px;
+    }
+
+    &__details {
+        margin-right: 50px;
+
+        &__title {
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            -webkit-text-stroke: 1px variables.$secondaryTextColor;
+            color: variables.$textColor;
+        }
+
+        &__description {
+            line-height: 22px;
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__details--petiscos {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+
+        &__details {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+    }
+}
